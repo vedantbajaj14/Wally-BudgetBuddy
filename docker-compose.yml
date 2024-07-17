@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  client:
+    build: client
+    ports:
+      - '3000:3000'
+  categories:
+    build: categories
+    ports:
+      - '4001:4001'
+  event-bus:
+    build: event-bus
+  sheets:
+    build: sheets
+    ports:
+      - '4000:4000'
+  items:
+    build: items
+    ports:
+      - '4002:4002'
+  query:
+    build: query
+    ports:
+      - '4003:4003'
